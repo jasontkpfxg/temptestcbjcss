@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         url = url + "&token=" + encodeURIComponent(token);
 
     var iframe = document.createElement("iframe");
-    iframe.id = "VERA-chatbot";
+    iframe.id = "VERA-chatbot" + url;
     iframe.title = "VERA Chatbot";
     iframe.allow = "microphone; geolocation";
     iframe.src = url;
