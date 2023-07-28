@@ -1,4 +1,4 @@
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
@@ -8,7 +8,8 @@
     const lang = urlParams.get("lang");
     const token = urlParams.get("token");
     const timestamp = Date.now();
-
+    console.log(agentCode);
+    console.log(token);
     var url = "https://vera-ai-chatbot.v-circle.com/sit/chat/embed?" + timestamp;
 
     if (agentID)
@@ -40,7 +41,7 @@
     cssLink.rel = "stylesheet";
     cssLink.href = "https://jasontkpfxg.github.io/temptestcbjcss/testcb.css"; // Replace with the actual URL of your CSS file
     document.head.appendChild(cssLink);
-})();
+});
 
 window.onmessage = function (e) {
     if (e.data == "CHATBOT_OPENED")
