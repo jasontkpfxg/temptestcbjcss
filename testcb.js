@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Attempt to set SameSite cookies from a CORS request
     function setSameSiteCookiesFromCORS() {
-        fetch("https://v-circle.com/", {
+        fetch(".v-circle.com/", {
             method: 'GET',
             credentials: 'include', // Include cookies in the CORS request
             headers: {
