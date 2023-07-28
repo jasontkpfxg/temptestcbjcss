@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             method: 'GET',
             credentials: 'include', // Include cookies in the CORS request
             headers: {
-                'Authorization': 'Bearer your-access-token',
+                'Authorization': 'Bearer ' + token,
             }
         })
         .then(response => {
