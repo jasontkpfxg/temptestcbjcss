@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Attempt to set SameSite cookies from a CORS request
     function setSameSiteCookiesFromCORS() {
-        fetch('https://vera-ai-chatbot.v-circle.com/sit/webapp-vc', {
+        fetch('https://vera-ai-chatbot.v-circle.com/', {
             method: 'GET',
             credentials: 'include', // Include cookies in the CORS request
             headers: {
