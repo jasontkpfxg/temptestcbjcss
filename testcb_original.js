@@ -1,4 +1,4 @@
-// testcb.js is Uglify by https://skalman.github.io/UglifyJS-online/
+// testcb.js is Uglify by https://www.uglifyjs.net/ or https://skalman.github.io/UglifyJS-online/
 
 document.addEventListener("DOMContentLoaded", function () {
     const scriptName = "testcb.js"; // Change this to the actual name of your script file
