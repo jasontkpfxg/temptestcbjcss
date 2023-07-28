@@ -1,28 +1,13 @@
-function getQueryParamFromScript(scriptName, paramName) {
-    const scripts = document.getElementsByTagName('script');
-    for (let i = 0; i < scripts.length; i++) {
-        const scriptSrc = scripts[i].src;
-        if (scriptSrc.includes(scriptName)) {
-            const params = new URL(scriptSrc).searchParams;
-            return params.get(paramName);
-        }
-    }
-    return null;
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     const scriptName = "testcb.js"; // Change this to the actual name of your script file
 
-    console.log(scriptName);
-    
     const agentID = getQueryParamFromScript(scriptName, "agentID");
     const agentCode = getQueryParamFromScript(scriptName, "agentCode");
     const userID = getQueryParamFromScript(scriptName, "userID");
     const lang = getQueryParamFromScript(scriptName, "lang");
     const token = getQueryParamFromScript(scriptName, "token");
     const timestamp = Date.now();
-    console.log(agentCode);
-    console.log(token);
+
     var url = "https://vera-ai-chatbot.v-circle.com/sit/chat/embed?" + timestamp;
 
     if (agentID)
@@ -37,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         url = url + "&token=" + encodeURIComponent(token);
 
     var iframe = document.createElement("iframe");
-    iframe.id = "VERA-chatbot" + url;
+    iframe.id = "VERA-chatbot";
     iframe.title = "VERA Chatbot";
     iframe.allow = "microphone; geolocation";
     iframe.src = url;
@@ -73,4 +58,16 @@ function chatbotClosed() {
     var chatbotContainer = document.querySelector(".chatbot");
     chatbotContainer.classList.remove("chatbot--expanded");
     chatbotContainer.classList.add("chatbot--closed");
+}
+
+function getQueryParamFromScript(scriptName, paramName) {
+    const scripts = document.getElementsByTagName('script');
+    for (let i = 0; i < scripts.length; i++) {
+        const scriptSrc = scripts[i].src;
+        if (scriptSrc.includes(scriptName)) {
+            const params = new URL(scriptSrc).searchParams;
+            return params.get(paramName);
+        }
+    }
+    return null;
 }
