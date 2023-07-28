@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const token = urlParams.get("token");
     const timestamp = Date.now();
 
-    var url = "https://localhost:4200/embed?" + timestamp;
+    var url = "https://vera-ai-chatbot.v-circle.com/sit/chat/embed?" + timestamp;
 
     if (agentID)
         url = url + "&agentID=" + encodeURIComponent(agentID);
