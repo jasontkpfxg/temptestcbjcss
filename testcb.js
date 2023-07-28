@@ -13,7 +13,7 @@ function getQueryParamFromScript(scriptName, paramName) {
 document.addEventListener("DOMContentLoaded", function () {
     const scriptName = "testcb.js"; // Change this to the actual name of your script file
 
-    console.log(scriptURL);
+    console.log(scriptName);
     
     const agentID = getQueryParamFromScript(scriptName, "agentID");
     const agentCode = getQueryParamFromScript(scriptName, "agentCode");
