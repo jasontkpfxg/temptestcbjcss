@@ -1,15 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+function getQueryParam(url, paramName) {
+    const params = new URL(url).searchParams;
+    return params.get(paramName);
+}
 
-    console.log(queryString);
-    console.log(urlParams);
+document.addEventListener("DOMContentLoaded", function () {
+    const scriptURL = document.currentScript.src;
+
+    console.log(scriptURL);
     
-    const agentID = urlParams.get("agentID");
-    const agentCode = urlParams.get("agentCode");
-    const userID = urlParams.get("userID");
-    const lang = urlParams.get("lang");
-    const token = urlParams.get("token");
+    const agentID = getQueryParam(scriptURL, "agentID");
+    const agentCode = getQueryParam(scriptURL, "agentCode");
+    const userID = getQueryParam(scriptURL, "userID");
+    const lang = getQueryParam(scriptURL, "lang");
+    const token = getQueryParam(scriptURL, "token");
     const timestamp = Date.now();
     console.log(agentCode);
     console.log(token);
