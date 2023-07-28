@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Dynamically add CSS styles
     var cssLink = document.createElement("link");
     cssLink.rel = "stylesheet";
-    cssLink.href = "https://https://jasontkpfxg.github.io/temptestcbjcss/testcb.css"; // Replace with the actual URL of your CSS file
+    cssLink.href = "https://jasontkpfxg.github.io/temptestcbjcss/testcb.css"; // Replace with the actual URL of your CSS file
     document.head.appendChild(cssLink);
 });
 
