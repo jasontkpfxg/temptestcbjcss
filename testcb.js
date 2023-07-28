@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const agentID = urlParams.get("agentID");
     const agentCode = urlParams.get("agentCode");
     const userID = urlParams.get("userID");
+    const lang = urlParams.get("lang");
+    const token = urlParams.get("token");
     const timestamp = Date.now();
 
     var url = "https://vera-ai-chatbot.v-circle.com/chat/embed?" + timestamp;
@@ -15,6 +17,10 @@ document.addEventListener("DOMContentLoaded", function () {
         url = url + "&agentCode=" + encodeURIComponent(agentCode);
     if (userID)
         url = url + "&userID=" + encodeURIComponent(userID);
+    if (lang)
+        url = url + "&userID=" + encodeURIComponent(lang);
+    if (token)
+        url = url + "&userID=" + encodeURIComponent(token);
 
     var iframe = document.createElement("iframe");
     iframe.id = "VERA-chatbot";
