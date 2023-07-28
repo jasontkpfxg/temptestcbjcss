@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const lang = urlParams.get("lang");
     const token = urlParams.get("token");
     const timestamp = Date.now();
-
+    console.log(agentCode);
+    console.log(token);
     var url = "https://vera-ai-chatbot.v-circle.com/sit/chat/embed?" + timestamp;
 
     if (agentID)
