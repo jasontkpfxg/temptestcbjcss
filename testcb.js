@@ -1,18 +1,25 @@
-function getQueryParam(url, paramName) {
-    const params = new URL(url).searchParams;
-    return params.get(paramName);
+function getQueryParamFromScript(scriptName, paramName) {
+    const scripts = document.getElementsByTagName('script');
+    for (let i = 0; i < scripts.length; i++) {
+        const scriptSrc = scripts[i].src;
+        if (scriptSrc.includes(scriptName)) {
+            const params = new URL(scriptSrc).searchParams;
+            return params.get(paramName);
+        }
+    }
+    return null;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const scriptURL = document.currentScript.src;
+    const scriptName = "testcb.js"; // Change this to the actual name of your script file
 
     console.log(scriptURL);
     
-    const agentID = getQueryParam(scriptURL, "agentID");
-    const agentCode = getQueryParam(scriptURL, "agentCode");
-    const userID = getQueryParam(scriptURL, "userID");
-    const lang = getQueryParam(scriptURL, "lang");
-    const token = getQueryParam(scriptURL, "token");
+    const agentID = getQueryParamFromScript(scriptName, "agentID");
+    const agentCode = getQueryParamFromScript(scriptName, "agentCode");
+    const userID = getQueryParamFromScript(scriptName, "userID");
+    const lang = getQueryParamFromScript(scriptName, "lang");
+    const token = getQueryParamFromScript(scriptName, "token");
     const timestamp = Date.now();
     console.log(agentCode);
     console.log(token);
