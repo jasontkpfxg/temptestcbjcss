@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (userID)
         url = url + "&userID=" + encodeURIComponent(userID);
     if (lang)
-        url = url + "&userID=" + encodeURIComponent(lang);
+        url = url + "&lang=" + encodeURIComponent(lang);
     if (token)
-        url = url + "&userID=" + encodeURIComponent(token);
+        url = url + "&token=" + encodeURIComponent(token);
 
     var iframe = document.createElement("iframe");
     iframe.id = "VERA-chatbot";
