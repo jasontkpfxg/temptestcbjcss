@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
 
+    console.log(queryString);
+    console.log(urlParams);
+    
     const agentID = urlParams.get("agentID");
     const agentCode = urlParams.get("agentCode");
     const userID = urlParams.get("userID");
