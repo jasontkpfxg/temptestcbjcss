@@ -1,3 +1,19 @@
+document.cookie = "_gcl_au=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_1QLPNMKFSB=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_7L7DVB3ESW=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_X40F2R9XTK=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_C2LNYF88H0=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_B7TFWF5EFS=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_090XLNZZ3Q=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_B7F9XHPRC6=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_H6LDWLC82Q=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_gid=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_B1QX9SERGQ=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_0QYMYJCHSX=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "googtrans=.v-circle.com/; SameSite=None; Secure";
+document.cookie = "_ga_DVL1YRSJLN=.v-circle.com/; SameSite=None; Secure";
+
 document.addEventListener("DOMContentLoaded", function () {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
