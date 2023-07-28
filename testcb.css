@@ -1,0 +1,51 @@
+html, body, .web-content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.chatbot {
+    position: fixed;
+    min-height: 0;
+    min-width: 0;
+    display: block;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    bottom: 0px;
+    right: 0px;
+    transform: none;
+    z-index: 9999;
+}
+
+.chatbot--closed {
+    width: 110px;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+.chatbot--expanded {
+    width: 100%;
+    height: 100%;
+}
+
+#VERA-chatbot {
+    border: none;
+    left: 0 !important;
+    top: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    background: transparent !important;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+}
